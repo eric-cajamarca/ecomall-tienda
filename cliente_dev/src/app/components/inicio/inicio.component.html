@@ -1,0 +1,393 @@
+<app-nav></app-nav>
+
+
+<div id="homepage-default">
+    <!-- inicio banners social -->
+    <div class="ps-home-banner">
+    
+        <div class="ps-carousel--nav owl-slider" data-owl-auto="false" data-owl-loop="false" data-owl-speed="15000"
+             data-owl-gap="0" data-owl-nav="false" data-owl-dots="true" data-owl-item="1" data-owl-item-xs="1"
+             data-owl-item-sm="1" data-owl-item-md="1" data-owl-item-lg="1" data-owl-duration="1000"
+             data-owl-mousedrag="on">
+           
+             <div *ngIf="descuento_activo !== undefined" class="ps-banner--3 bg--cover white" [style.backgroundImage]="'url(' + url + 'obtener_banner_descuento/' + descuento_activo.banner + ')'">
+              <div class="ps-banner__social">
+                  <ul class="ps-list--social">
+                      <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                      <li><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                  </ul>
+              </div>
+              <div class="row col-sm-9">
+                <div class="col-lg-6 offset-lg-1 offset-xl-0 pb-4 pb-md-6"  >
+                  <h2 class="display-2 mb-lg-5 pb-3 cs-from-left" style=" font-size: 50px !important; text-shadow: 2px 2px 2px white !important;  padding-top: 20px;">{{descuento_activo.titulo}}</h2>
+                  <h3 class="font-size-lg text-uppercase cs-from-left cs-delay-1" style="color: #007bff !important; font-size: 36px;">Desde {{descuento_activo.fecha_inicio}} <br> hasta {{descuento_activo.fecha_fin}}</h3>
+                  
+                  <h1 class="display-2 mb-lg-5 pb-3 cs-from-left" style="color: red; font-size: 80px !important; text-shadow: 2px 2px 2px white !important;">{{descuento_activo.descuento}}%</h1>
+                  <div class="mb-4 cs-scale-up cs-delay-2">
+                    <a [routerLink]="['/productos']"  class="btn btn-outline-primary btn-lg">Ver productos</a>
+                  </div>
+                </div>
+              </div>
+             </div>
+
+            <div [ngStyle]="descuento_activo !== undefined ? { 'display': 'none' } : {}"
+              class="ps-banner--3 bg--cover white" data-background="assets/img/ecommerce/home/banners/banner.jpg">
+                <div class="ps-banner__social">
+                    <ul class="ps-list--social">
+                        <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+                <div class="ps-banner__content">
+                    <h3 data-animation-in="fadeInRight" data-animation-out="animate-out fadeOutLeft" style="color:rgb(26, 25, 25);">Hola <br> Mundo Ecológico</h3>
+                    <a class="ps-link--under" [routerLink]="['/productos']"  data-animation-in="fadeInUp"
+                                          data-animation-out="animate-out fadeOutDown">{{ 'inicio.item_dieciocho' | translate }}</a>
+                </div>
+            </div>
+            <div [ngStyle]="descuento_activo !== undefined ? { 'display': 'none' } : {}"
+              class="ps-banner--3 bg--cover white" data-background="assets/img/ecommerce/home/banners/278182790.jpg">
+                <div class="ps-banner__social">
+                    <ul class="ps-list--social">
+                        <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+                <div class="ps-banner__content">
+                    <h3 data-animation-in="fadeInRight" data-animation-out="animate-out fadeOutLeft" style="color:rgb(26, 25, 25);"><br></h3>
+                    <a class="ps-link--under" [routerLink]="['/productos']"  data-animation-in="fadeInUp"
+                                          data-animation-out="animate-out fadeOutDown">{{ 'inicio.item_dieciocho' | translate }}</a>
+                </div>
+            </div>
+            <div [ngStyle]="descuento_activo !== undefined ? { 'display': 'none' } : {}"
+              class="ps-banner--3 bg--cover white" data-background="assets/img/ecommerce/home/banners/quesepongaverde.jpg">
+                <div class="ps-banner__social">
+                    <ul class="ps-list--social">
+                        <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+                <div class="ps-banner__content">
+                    <h3 data-animation-in="fadeInRight" data-animation-out="animate-out fadeOutLeft" style="color:rgb(26, 25, 25);"><br></h3>
+                    <a class="ps-link--under" [routerLink]="['/productos']"  data-animation-in="fadeInUp"
+                                          data-animation-out="animate-out fadeOutDown">{{ 'inicio.item_dieciocho' | translate }}</a>
+                </div>
+            </div>
+            <div [ngStyle]="descuento_activo !== undefined ? { 'display': 'none' } : {}" 
+              class="ps-banner--3 bg--cover white" data-background="assets/img/ecommerce/home/banners/eco4.jpg">
+                <div class="ps-banner__social">
+                    <ul class="ps-list--social">
+                        <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+                <div class="ps-banner__content">
+                    <h3 data-animation-in="fadeInRight" data-animation-out="animate-out fadeOutLeft" style="color:rgb(26, 25, 25);">Hola <br> Mundo Ecológico</h3>
+                    <a class="ps-link--under" [routerLink]="['/productos']"  data-animation-in="fadeInUp"
+                                          data-animation-out="animate-out fadeOutDown">{{ 'inicio.item_dieciocho' | translate }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- colecciones -->
+    <div class="ps-home-collection-2" style="padding-top: 20px;">
+        <div class="container">
+          <div *ngFor="let item of categorias" class="ps-section__content">
+            <figure>
+              <div class="ps-block--collection-2" >
+                <div class="ps-block__thumbnail bg--top-right">
+                  <img [src]="url + 'obtener_logo/' + item.portada" alt="Category image" >
+                </div>
+                <div class="ps-block__content">
+                  <h4>{{item.titulo}}</h4>
+                  <a [routerLink]="['/productos/categoria/',item._id]" routerLinkActive="router-link-active">{{ 'inicio.item_seis' | translate }}</a>
+                </div>
+              </div>
+            </figure>
+          </div>
+        </div>
+    </div>
+      
+    <!-- los mas vendido / destacado-->
+    <div class="ps-section ps-home-top-sellers">
+        <div class="container">
+            <div class="ps-section__header">
+                <figure>
+                    <figcaption>{{ 'inicio.item_cuatro' | translate }}</figcaption>
+                    <p>{{ 'inicio.item_cinco' | translate }}</p>
+                </figure>
+            </div>
+            <div class="ps-section__content" >
+                <div class="ps-product-box" >
+                    <div class="row">
+                          <div class="ps-product--outside "  >
+                          
+                            <div class="ps-product--outside large" *ngIf="producto_destacado_uno != undefined" >
+                                <div class="ps-product__thumbnail" *ngIf="producto_destacado_uno.producto" >
+                                    <img [src]="url +'obtener_portada/'+producto_destacado_uno.producto.portada" alt="" >
+                                    <a class="ps-product__overlay" [routerLink]="['/productos/'+producto_destacado_uno.producto.slug]" ></a>
+                                </div>
+                                <div class="ps-product__content" *ngIf="producto_destacado_uno.producto">
+                                  <a class="ps-product__title" [routerLink]="['/productos/'+producto_destacado_uno.producto.slug]" >
+                                    {{producto_destacado_uno.producto.titulo}}
+                                  </a>
+                                  <p class="ps-product__price">
+                                      <ng-container *ngIf="currency != 'PEN'">
+                                        <span class="text-danger mr-3" *ngIf="producto_destacado_uno.producto.precio_antes_dolares >= 1">
+                                          <del>${{producto_destacado_uno.producto.precio_antes_dolares}}</del>
+                                        </span>
+                                        <span><b>${{producto_destacado_uno.producto.precio_dolar}}</b></span>
+                                      </ng-container>
+                                      <ng-container *ngIf="currency == 'PEN'">
+                                        <span class="text-danger mr-3" *ngIf="producto_destacado_uno.producto.precio_antes_soles >= 1">
+                                          <del>S/{{producto_destacado_uno.producto.precio_antes_soles}}</del>
+                                        </span>
+                                        <span><b>S/{{producto_destacado_uno.producto.precio}}</b></span>
+                                      </ng-container>
+                                    </p>
+                                    <a class="ps-link--under" [routerLink]="['/productos/'+producto_destacado_uno.producto.slug]" >{{ 'inicio.item_siete' | translate }}</a>
+                                </div>
+                            </div>
+
+                            <div class="ps-product--outside large" *ngIf="producto_destacado_dos != undefined">
+                                <div class="ps-product__thumbnail" *ngIf="producto_destacado_dos.producto">
+                                    <img [src]="url +'obtener_portada/'+producto_destacado_dos.producto.portada" alt="">
+                                    <a class="ps-product__overlay" [routerLink]="['/productos/'+producto_destacado_dos.producto.slug]" ></a>
+                                </div>
+                                <div class="ps-product__content" *ngIf="producto_destacado_dos.producto">
+                                  <a class="ps-product__title" [routerLink]="['/productos/'+producto_destacado_dos.producto.slug]" >
+                                    {{producto_destacado_dos.producto.titulo}}
+                                  </a>
+                                  <p class="ps-product__price">
+                                      <ng-container *ngIf="currency != 'PEN'">
+                                        <span class="text-danger mr-3" *ngIf="producto_destacado_dos.producto.precio_antes_dolares >= 1">
+                                          <del>${{producto_destacado_dos.producto.precio_antes_dolares}}</del>
+                                        </span>
+                                        <span><b>${{producto_destacado_dos.producto.precio_dolar}}</b></span>
+                                      </ng-container>
+                                      <ng-container *ngIf="currency == 'PEN'">
+                                        <span class="text-danger mr-3" *ngIf="producto_destacado_dos.producto.precio_antes_soles >= 1">
+                                          <del>S/{{producto_destacado_dos.producto.precio_antes_soles}}</del>
+                                        </span>
+                                        <span><b>S/{{producto_destacado_dos.producto.precio}}</b></span>
+                                      </ng-container>
+                                    </p>
+                                    <a class="ps-link--under" [routerLink]="['/productos/'+producto_destacado_dos.producto.slug]" >{{ 'inicio.item_siete' | translate }}</a>
+                                </div>
+                            </div>
+
+                            <div class="ps-product--outside large" *ngIf="producto_destacado_tres != undefined">
+                                <div class="ps-product__thumbnail" *ngIf="producto_destacado_tres.producto">
+                                    <img [src]="url +'obtener_portada/'+producto_destacado_tres.producto.portada" alt="">
+                                    <a class="ps-product__overlay" [routerLink]="['/productos/'+producto_destacado_tres.producto.slug]" ></a>
+                                </div>
+                                <div class="ps-product__content" *ngIf="producto_destacado_tres.producto">
+                                  <a class="ps-product__title" [routerLink]="['/productos/'+producto_destacado_tres.producto.slug]" >
+                                    {{producto_destacado_tres.producto.titulo}}
+                                  </a>
+                                  <p class="ps-product__price">
+                                      <ng-container *ngIf="currency != 'PEN'">
+                                        <span class="text-danger mr-3" *ngIf="producto_destacado_tres.producto.precio_antes_dolares >= 1">
+                                          <del>${{producto_destacado_tres.producto.precio_antes_dolares}}</del>
+                                        </span>
+                                        <span><b>${{producto_destacado_tres.producto.precio_dolar}}</b></span>
+                                      </ng-container>
+                                      <ng-container *ngIf="currency == 'PEN'">
+                                        <span class="text-danger mr-3" *ngIf="producto_destacado_tres.producto.precio_antes_soles >= 1">
+                                          <del>S/{{producto_destacado_tres.producto.precio_antes_soles}}</del>
+                                        </span>
+                                        <span><b>S/{{producto_destacado_tres.producto.precio}}</b></span>
+                                      </ng-container>
+                                    </p>
+                                    <a class="ps-link--under" [routerLink]="['/productos/'+producto_destacado_tres.producto.slug]" >{{ 'inicio.item_siete' | translate }}</a>
+                                </div>
+                            </div>
+
+                            <div class="ps-product--outside large" *ngIf="producto_destacado_cuatro != undefined">
+                                <div class="ps-product__thumbnail" *ngIf="producto_destacado_cuatro.producto">
+                                    <img [src]="url +'obtener_portada/'+producto_destacado_cuatro.producto.portada" alt="">
+                                    <a class="ps-product__overlay" [routerLink]="['/productos/'+producto_destacado_cuatro.producto.slug]" ></a>
+                                </div>
+                                <div class="ps-product__content" *ngIf="producto_destacado_cuatro.producto">
+                                  <a class="ps-product__title" [routerLink]="['/productos/'+producto_destacado_cuatro.producto.slug]" >
+                                    {{producto_destacado_cuatro.producto.titulo}}
+                                  </a>
+                                  <p class="ps-product__price">
+                                      <ng-container *ngIf="currency != 'PEN'">
+                                        <span class="text-danger mr-3" *ngIf="producto_destacado_cuatro.producto.precio_antes_dolares >= 1">
+                                          <del>${{producto_destacado_cuatro.producto.precio_antes_dolares}}</del>
+                                        </span>
+                                        <span><b>${{producto_destacado_cuatro.producto.precio_dolar}}</b></span>
+                                      </ng-container>
+                                      <ng-container *ngIf="currency == 'PEN'">
+                                        <span class="text-danger mr-3" *ngIf="producto_destacado_cuatro.producto.precio_antes_soles >= 1">
+                                          <del>S/{{producto_destacado_cuatro.producto.precio_antes_soles}}</del>
+                                        </span>
+                                        <span><b>S/{{producto_destacado_cuatro.producto.precio}}</b></span>
+                                      </ng-container>
+                                    </p>
+                                    <a class="ps-link--under" [routerLink]="['/productos/'+producto_destacado_cuatro.producto.slug]" >{{ 'inicio.item_siete' | translate }}</a>
+                                </div>
+                            </div>
+                          </div>
+                   </div>
+                </div>
+           </div>
+        </div>
+    </div>
+
+    <div class="ps-section ps-home-product" style="padding-bottom: 60px !important;padding-top: 100px !important;">
+        <div class="container">
+            <div class="ps-section__header">
+                <figure>
+                    <figcaption>{{ 'inicio.item_ocho' | translate }}</figcaption>
+                    <p>{{ 'inicio.item_nueve' | translate }}</p>
+                </figure>
+                <ul>
+                    <li class="active"><a>{{ 'inicio.item_ocho' | translate }}</a></li>
+                    <li><a style="cursor: pointer;" [routerLink]="['/productos']">{{ 'inicio.item_diez' | translate }}</a></li>
+                </ul>
+            </div>
+            <!-- lo nuevo en la tienda -->
+            <div class="ps-section__content">
+                <div class="row" *ngIf="new_productos.length >= 1">
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 " *ngFor="let item of new_productos">
+                        <div class="ps-product" style="background-color: rgb(237, 237, 241);">
+                            <div class="ps-product__thumbnail">
+                              <img class="ps-product__image"  [src]="url +'obtener_portada/'+item.portada" alt=""/>
+                              <img class="ps-product__image-alt" [src]="url +'obtener_portada/'+item.galeria[0].imagen" alt=""/>
+                              <a class="ps-product__overlay" [routerLink]="['/productos/'+item.slug]"></a>
+                                <div class="ps-product__actions">
+                                    <a [routerLink]="['/productos/'+item.slug]">{{ 'inicio.item_once' | translate }}</a>
+                                    
+                                </div>
+                            </div>
+                            <div class="ps-product__content">
+                                <a class="ps-product__title" [routerLink]="['/productos/'+item.slug]">{{item.titulo}}</a>
+                                  <span><i class="text-warning fa fa-star"></i></span>
+                                  <span><i class="text-warning fa fa-star"></i></span>
+                                  <span><i class="text-warning fa fa-star"></i></span>
+                                  <span><i class="text-warning fa fa-star"></i></span>
+                                  <span><i class="text-warning fa fa-star"></i></span>
+                                  <p class="ps-product__price">
+                                      <ng-container *ngIf="currency != 'PEN'">
+                                        <span class="text-danger mr-3" *ngIf="item.precio_antes_dolares >= 1">
+                                          <del>${{item.precio_antes_dolares}}</del>
+                                        </span>
+                                        <span><b>${{item.precio_dolar}}</b></span>
+                                      </ng-container>
+                                      <ng-container *ngIf="currency == 'PEN'">
+                                        <span class="text-danger mr-3" *ngIf="item.precio_antes_soles >= 1">
+                                          <del>S/{{item.precio_antes_soles}}</del>
+                                        </span>
+                                        <span><b>S/{{item.precio}}</b></span>
+                                      </ng-container>
+                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" *ngIf="new_productos.length == 0">
+                    <div class="col-12 text-center">
+                      <h3>No se encontraron productos que mostrar</h3>
+                    </div>
+                </div>
+            </div>
+            <!-- ver mas -->
+            <div class="ps-section__footer"><a class="ps-link--under" [routerLink]="['/productos']">{{ 'inicio.item_seis' | translate }}</a></div>
+            
+        </div>
+    </div>
+    <!-- blog recientes -->
+    <!-- <div class="ps-home-blog" style="padding-top: 70px !important;padding-bottom: 70px !important;background: #f0f0f0;">
+      <div class="container">
+          <div class="ps-section__header">
+              <figure>
+                  <figcaption>Blogs Recientes</figcaption>
+                  <p>Nuestros blogs</p>
+                  
+              </figure>
+          </div>
+          <div class="ps-section__content">
+              <div class="row">
+                  <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 ">
+                      <div class="ps-post">
+                          <div class="ps-post__thumbnail"><img src="assets/images/home/blog_1.jpg" alt=""><a
+                              class="ps-post__overlay" [routerLink]="['/nosotros']"  ></a></div>
+                          <div class="ps-post__content"><a class="ps-post__title" [routerLink]="['/nosotros']">Nuestra marca</a>
+                              <a class="ps-link--under ps-post__morelink" [routerLink]="['/nosotros']"> {{ 'menu.item_siete' | translate }}</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
+                    <div class="ps-post">
+                        <div class="ps-post__thumbnail"><img src="assets/images/home/blog_3.jpg" alt=""><a
+                            class="ps-post__overlay" [routerLink]="['/embajadoras']"></a></div>
+                        <div class="ps-post__content"><a class="ps-post__title" [routerLink]="['/embajadoras']">
+                            Qué beneficios trae el uso de productos ecológicos en tu cocina
+                        </a>
+                            <a class="ps-link--under ps-post__morelink" [routerLink]="['/embajadoras']"> Blog cocina</a>
+                        </div>
+                    </div>
+                </div>
+                  <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
+                      <div class="ps-post">
+                          <div class="ps-post__thumbnail"><img src="assets/images/home/blog_2.jpg" alt=""><a
+                              class="ps-post__overlay" [routerLink]="['/impacto-social']" ></a></div>
+                          <div class="ps-post__content"><a class="ps-post__title" [routerLink]="['/impacto-social']" >
+                            Todos unidos por un mundo verde y sano
+                          </a>
+                              <a class="ps-link--under ps-post__morelink" [routerLink]="['/impacto-social']">  <a class="ps-link--under ps-post__morelink" [routerLink]="['/embajadoras']"> {{ 'menu.item_ocho' | translate }}</a></a>
+                          </div>
+                      </div>
+                  </div>
+                  
+              </div>
+          </div>
+      </div>
+    </div> -->
+
+   <!-- <div class="ps-section--instagram">
+    <div class="owl-slider" data-owl-auto="true" data-owl-loop="true" data-owl-speed="10000" data-owl-gap="0"
+         data-owl-nav="false" data-owl-dots="false" data-owl-item="7" data-owl-item-xs="3" data-owl-item-sm="4"
+         data-owl-item-md="5" data-owl-item-lg="6" data-owl-duration="1000" data-owl-mousedrag="off">
+        <div class="ps-block--instagram"><img src="assets/img/ecommerce/home/instagram/01.jpg" alt="">hola1<a href="#"><i
+            class="fa fa-instagram"></i>aaaaaaaaaaa</a>xczxcxzc</div>
+        <div class="ps-block--instagram"><img src="assets/img/ecommerce/home/instagram/02.jpg" alt="">hola2<a href="#"><i
+            class="fa fa-instagram"></i></a></div>
+        <div class="ps-block--instagram"><img src="" alt=""><a href="#"><i
+            class="fa fa-instagram"></i></a></div>
+        <div class="ps-block--instagram"><img src="" alt=""><a href="#"><i
+            class="fa fa-instagram"></i></a></div>
+        <div class="ps-block--instagram"><img src="" alt=""><a href="#"><i
+            class="fa fa-instagram"></i></a></div>
+        <div class="ps-block--instagram"><img src="" alt=""><a href="#"><i
+            class="fa fa-instagram"></i></a></div>
+        <div class="ps-block--instagram"><img src="" alt=""><a href="#"><i
+            class="fa fa-instagram"></i></a></div>
+    </div>
+    </div> -->
+</div>
+
+
+<!-- <div class="ps-section--instagram">
+    <div class="owl-slider" data-owl-auto="true" data-owl-loop="true" data-owl-speed="10000" data-owl-gap="0"
+         data-owl-nav="false" data-owl-dots="false" data-owl-item="7" data-owl-item-xs="3" data-owl-item-sm="4"
+         data-owl-item-md="5" data-owl-item-lg="6" data-owl-duration="1000" data-owl-mousedrag="off">
+        <div class="ps-block--instagram"><img src="" alt=""><a href="#"><i
+            class="fa fa-instagram"></i></a></div>
+        <div class="ps-block--instagram"><img src="" alt=""><a href="#"><i
+            class="fa fa-instagram"></i></a></div>
+        <div class="ps-block--instagram"><img src="" alt=""><a href="#"><i
+            class="fa fa-instagram"></i></a></div>
+        <div class="ps-block--instagram"><img src="" alt=""><a href="#"><i
+            class="fa fa-instagram"></i></a></div>
+        <div class="ps-block--instagram"><img src="" alt=""><a href="#"><i
+            class="fa fa-instagram"></i></a></div>
+        <div class="ps-block--instagram"><img src="" alt=""><a href="#"><i
+            class="fa fa-instagram"></i></a></div>
+        <div class="ps-block--instagram"><img src="" alt=""><a href="#"><i
+            class="fa fa-instagram"></i></a></div>
+    </div>
+</div> -->
+
+<app-footer></app-footer>

@@ -1,0 +1,48 @@
+[
+    {
+        "titulo":"Manualidades",
+        "slug":"manualidades",
+        "_id": "1000"
+    },
+    {
+        "titulo":"Cocina",
+        "slug":"cocina",
+        "_id": "1001"
+    },
+    {
+        "titulo":"Bolsas",
+        "slug":"bolsas",
+        "_id": "1002"
+    },
+    {
+        "titulo":"Limpieza",
+        "slug":"limpieza",
+        "_id": "1003"
+    },
+    {
+        "titulo":"Oficina",
+        "slug":"oficina",
+        "_id": "1004"
+    },
+    {
+        "titulo":"Varios",
+        "slug":"varios",
+        "_id": "1005"
+    },
+    {
+        "titulo":"Otros",
+        "slug":"otros",
+        "_id": "1006"
+    },
+    {
+        "titulo":"Accesorios",
+        "slug":"accesorios",
+        "_id": "1007"
+    },
+    {
+        "titulo":"Packs",
+        "slug":"packs",
+        "_id": "1008"
+    }
+    
+]
